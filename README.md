@@ -36,8 +36,6 @@ To use the Motivation Quote Clock Widget, follow these simple steps:
    ```bash
    python app.py
 
-  
-
 ## Usage
 
 Once the widget is up and running, simply keep an eye on your console or terminal window to see the time ticking away alongside uplifting quotes. Let the motivation flow through you as you conquer your tasks with renewed vigor! 🚀💼
@@ -45,6 +43,10 @@ Once the widget is up and running, simply keep an eye on your console or termina
 ## Contributions
 
 We welcome contributions from the community to make this widget even better! If you have any ideas for improvements, bug fixes, or additional features, feel free to submit a pull request. Together, we can inspire and empower each other to reach new heights! 🌟🤝
+
+
+## 💰 You can help me by Donating
+  [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/ragibalikhan) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/ragibali01) [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/ragibalikhan) 
 
 ## License
 
