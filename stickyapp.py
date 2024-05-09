@@ -2,6 +2,9 @@ import tkinter as tk
 from tkinter import ttk
 from datetime import datetime
 import requests
+import sys
+import win32gui
+import win32con
 
 # API endpoint for fetching quotes
 api_url = "http://127.0.0.1:5000/api/motivational-quotes"
@@ -30,21 +33,30 @@ def update_quote():
     quote_label.config(text=f"Motivational Quote: {quote}")
     root.after(30000, update_quote)  # Update every 30000 milliseconds (30 seconds)
 
+# Get the handle of the desktop window
+def get_desktop_handle():
+    return win32gui.GetDesktopWindow()
+
+# Set clock window as a child of the desktop window
+def set_clock_on_desktop():
+    desktop_handle = get_desktop_handle()
+    if desktop_handle:
+        win32gui.SetParent(root.winfo_id(), desktop_handle)
+        win32gui.SetWindowLong(root.winfo_id(), win32con.GWL_EXSTYLE,
+                               win32gui.GetWindowLong(root.winfo_id(), win32con.GWL_EXSTYLE) | win32con.WS_EX_LAYERED)
+        win32gui.SetLayeredWindowAttributes(root.winfo_id(), 0, 255, win32con.LWA_ALPHA)
+
 # Create the main window
 root = tk.Tk()
 root.title("Futuristic Clock Widget")
-root.geometry("600x400")
+root.geometry("420x250")
 root.configure(bg="#333333")  # Background color
+root.overrideredirect(True)  # Remove window decorations
 root.attributes("-topmost", True)  # Keep the window on top of others
-root.attributes("-alpha", 0.8)  # Set transparency
-
-# Set window to be sticky
-root.attributes("-toolwindow", True)
-root.attributes("-topmost", True)
 
 # Create and configure labels
 time_label = ttk.Label(root, font=("DS-Digital", 48), foreground="#FFD700", background="#333333")
-quote_label = ttk.Label(root, font=("Arial", 14), wraplength=400, justify="center", foreground="#00FF00", background="#333333")
+quote_label = ttk.Label(root, font=("Arial", 14), wraplength=400, justify="center", foreground="#FFF", background="#333333")
 
 # Pack labels into the window
 time_label.pack(pady=20)
@@ -53,6 +65,9 @@ quote_label.pack()
 # Run the initial updates
 update_time()
 update_quote()
+
+# Set clock window as a child of the desktop
+set_clock_on_desktop()
 
 # Start the Tkinter event loop
 root.mainloop()

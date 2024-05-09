@@ -38,7 +38,7 @@ root.configure(bg="#333333")  # Background color
 
 # Create and configure labels
 time_label = ttk.Label(root, font=("DS-Digital", 48), foreground="#FFD700", background="#333333")
-quote_label = ttk.Label(root, font=("Arial", 14), wraplength=400, justify="center", foreground="#00FF00", background="#333333")
+quote_label = ttk.Label(root, font=("Arial", 14), wraplength=400, justify="center", foreground="#FFF", background="#333333")
 
 # Pack labels into the window
 time_label.pack(pady=20)
