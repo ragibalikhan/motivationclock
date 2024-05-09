@@ -18,4 +18,42 @@ To use the Motivation Quote Clock Widget, follow these simple steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/motivation-quote-clock-widget.git
+   git clone https://github.com/ragibalikhan/motivationclock.git
+   
+2. **Navigate to the Directory:**
+    ```bash
+    cd motivationclock
+
+3. **Install requirements.txt:**
+    ```bash
+    pip install -r requirements.txt   
+
+4. **Run the Flask API:**
+    ```bash
+    python quoteapi.py
+    
+5. **Now Run the Python Script:**
+   ```bash
+   python app.py
+
+  
+
+## Usage
+
+Once the widget is up and running, simply keep an eye on your console or terminal window to see the time ticking away alongside uplifting quotes. Let the motivation flow through you as you conquer your tasks with renewed vigor! 🚀💼
+
+## Contributions
+
+We welcome contributions from the community to make this widget even better! If you have any ideas for improvements, bug fixes, or additional features, feel free to submit a pull request. Together, we can inspire and empower each other to reach new heights! 🌟🤝
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+Keep striving for greatness, and remember: every minute counts on the journey to success!
+
+
+   
+   
